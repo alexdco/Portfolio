@@ -2,14 +2,14 @@
 
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import { createSession } from "@/app/actions/create-session";
-import type { CHAT_PROFILE_QUERYResult } from "@/sanity.types";
+import type { CHAT_PROFILE_QUERY_RESULT } from "@/sanity.types";
 import {useSidebar} from "@/components/ui/sidebar";
 ;
 
 export function Chat({
                          profile,
                      }: {
-    profile: CHAT_PROFILE_QUERYResult | null;
+    profile: CHAT_PROFILE_QUERY_RESULT | null;
 }) {
     const { toggleSidebar } = useSidebar();
     // Generate greeting based on available profile data

@@ -24,7 +24,11 @@ const CHAT_PROFILE_QUERY = defineQuery(`*[_id == "singleton-profile"][0]{
   }`);
 
 async function ChatWrapper() {
-    const { data: profile } = await sanityFetch({ query: CHAT_PROFILE_QUERY });
+    // Profile text feeds ChatKit, not visual editing, so skip stega encoding
+    const { data: profile } = await sanityFetch({
+        query: CHAT_PROFILE_QUERY,
+        stega: false,
+    });
 
     return (
         <div className="h-full w-full">

@@ -1,6 +1,6 @@
 "use client";
 
-import { RocketIcon } from "@sanity/icons";
+import { RocketIcon } from "@sanity/icons/Rocket";
 import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";

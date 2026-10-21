@@ -1,9 +1,9 @@
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import type { BLOG_POST_QUERYResult } from "@/sanity.types";
+import type { BLOG_POST_QUERY_RESULT } from "@/sanity.types";
 
-type BlogContent = NonNullable<NonNullable<BLOG_POST_QUERYResult>["content"]>;
+type BlogContent = NonNullable<NonNullable<BLOG_POST_QUERY_RESULT>["content"]>;
 
 const components: PortableTextComponents = {
   block: {
